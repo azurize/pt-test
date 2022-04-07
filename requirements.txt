@@ -1,3 +1,4 @@
 flask
+itsdangerous==2.0.1
 requests
 python-dotenv
