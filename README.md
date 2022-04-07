@@ -28,6 +28,9 @@ Index:
 <!-- Accounts/Compliance -->
 -- testAccount.py : Creates a randomly generated test custodial account (using happy path PII) with all checks created/passed
 
+<!-- Flask -->
+-- app.py : Application configuration to define all routes and functions for each action
+
 <!-- Payment Rails -->
 -- plaidFtm.py : Creates a Plaid-linked funds transfer method (must have Plaid access token available before using)
 
