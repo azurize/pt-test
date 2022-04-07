@@ -5,13 +5,13 @@ import requests
 
 from dotenv import load_dotenv
 
+load_dotenv('.env')
+
 logging.basicConfig(
     level=logging.INFO,
     format='{asctime} {levelname:<8} {message}',
     style='{'
 )
-
-load_dotenv('.env')
 
 ENV = 'https://sandbox.primetrust.com'
 HEADERS = {'Authorization': 'Bearer ' + os.environ.get('TOKEN')}
