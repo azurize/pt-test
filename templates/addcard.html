@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link a Card</title>
+    <script
+      type="text/javascript"
+      src="https://sandbox.bootstrapper.primetrust-cdn.com/purchaseProtection.js"
+      id="071fe2143248"
+      defer
+    ></script>
+    <script type="text/javascript">
+      console.log("[primetrust] Loading Prime Trust Embedding API");
+
+      window.primeTrustReady = function (pt) {
+        console.log("[primetrust] Loading embeddables...");
+
+        pt.launchCreditCard({
+          target: document.getElementById("verification"),
+          resourceTokenHash: "{% for token in tokens %}{{ token }}{% endfor %}",
+          theme: {
+            //theme attributes
+          },
+          events: {
+            cardVerified: function (contactId, fundsTransferMethodId) {
+              console.log(
+                "[primetrust] Funds transfer method created with ID:",
+                fundsTransferMethodId
+              );
+              console.log("[primetrust] Created for Contact: :", contactId);
+            },
+          },
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div id="verification"></div>
+  </body>
+</html>

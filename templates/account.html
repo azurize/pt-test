@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Creation</title>
+    <script type="text/javascript" src="https://sandbox.bootstrapper.primetrust-cdn.com/bootstrap.js" defer></script>
+    <script type="text/javascript">
+      console.log("[primetrust] 1. Loading Prime Trust Embedding API");
+      window.primeTrustReady = function (pt) {
+        console.log("[primetrust] 2. Loading embedded account creation...");
+        // or launchCreditCard, launchCreateCompany, launchCreateNaturalPerson
+        pt.launchCreateAccount({
+          target: document.getElementById("main"),
+          // this token is generated server-side with our `/v2/resource-tokens` API
+          resourceTokenHash: '{% for token in tokens %}{{ token }}{% endfor %}',
+          events: {
+            loaded: function () {
+              console.log("[primetrust] 3. Embedded account creation loaded!");
+            },
+            resourceCreated: function (accountId) {
+              console.log(
+                "[primetrust] 4. Account created with ID: ",
+                accountId
+              );
+            },
+          },
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div id="main"></div>
+  </body>
+</html>
