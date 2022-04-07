@@ -15,6 +15,12 @@ Instructions
     2a. You can create a new JWT with auth.py
 3. Open a terminal and run script of your choice
 
+Instructions for using widgets
+
+1. Ensure that you have installed the requirements specified in requirements.txt
+2. Open a terminal, navigate to the directory holding "app.py" and run the following command: flask run
+3. Navigate to whichever route you are trying to access as specified in "app.py" (e.g. 127.0.0.1/addcard/)
+
 Index:
 <!-- Authentication -->
 -- auth.py : Creates a JWT  
