@@ -2,7 +2,7 @@
 | README |
 ----------
 
-Updated: 4/6/2022
+Updated: 4/7/2022
 
 Pre-requisites: 
 - Python 3.10+ must be installed
@@ -27,4 +27,4 @@ Index:
 
 <!-- Misc. -->
 -- issuance.py : Creates a cardholder and verifying the card holder in debit card issuance flow
-    * Requires enablement on the Prime Trust side in order to function properly
+    * Requires enablement on the Prime Trust side in order to function properly, and values to be prefilled for the account and contact ID
