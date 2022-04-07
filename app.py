@@ -14,7 +14,6 @@ def individualAccount():
     return render_template('account.html', tokens=TOKEN)
 
 
-
 #   Account creation widget - company
 #   http://127.0.0.1:5000/company/
 
