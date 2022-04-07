@@ -69,7 +69,7 @@ payload = {'contact-id': contact_id,
     'extension' : 'jpg'
     }
 files = [
-    ('file', ('file', open('static/img/passport.jpg', 'rb'), 'application/octet-stream'))
+    ('file', ('file', open('static/images/passport.jpg', 'rb'), 'application/octet-stream'))
 ]
 r = requests.post(path, headers=HEADERS, data=payload, files=files)
 
