@@ -11,8 +11,7 @@ Pre-requisites:
 Instructions
 
 1. Install any required modules via 'pip install -r requirements.txt'
-2. Enter your JWT and any of the applicable variables in a .env file (.env.example is included)
-    2a. You can create a new JWT with auth.py
+2. Enter your JWT and any of the applicable variables in a .env file (.env.example is included). You can create a new JWT with auth.py
 3. Open a terminal and run script of your choice
 
 Instructions for using widgets
