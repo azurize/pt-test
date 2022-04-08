@@ -107,6 +107,7 @@ if r.ok:
     logging.info('Done.')
 else:
     logging.error('Error submitting KYC document check.')
+    logging.error(json.dumps(r.json(), indent=4, sort_keys=True))
     exit(0)
 
 # Approve KYC document check
@@ -119,6 +120,7 @@ if r.ok:
     logging.info('Done.')
 else:
     logging.error('Error verifying KYC document check.')
+    logging.error(json.dumps(r.json(), indent=4, sort_keys=True))
     exit(0)
 
 logging.info('ACCOUNT ID: ' + account_id)
