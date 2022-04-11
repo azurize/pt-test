@@ -2,7 +2,7 @@
 | README |
 ----------
 
-Updated: 4/7/2022
+Updated: 4/11/2022
 
 Pre-requisites: 
 - Python 3.10+ must be installed
@@ -34,5 +34,5 @@ Index:
 -- plaidFtm.py : Creates a Plaid-linked funds transfer method (must have Plaid access token available before using)
 
 <!-- Misc. -->
--- issuance.py : Creates a cardholder and verifying the card holder in debit card issuance flow
+-- issuance.py : Creates a cardholder and verifying the card holder in debit card issuance flow (WIP)
     * Requires enablement on the Prime Trust side in order to function properly, and values to be prefilled for the account and contact ID
