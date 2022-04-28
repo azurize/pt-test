@@ -28,6 +28,7 @@ while(True):
     else:
         logging.error(
             'Invalid attribute. Please re-run script and enter a value of either 1 (sandbox) or 2 (production).')
+        exit(0)
 
 # Email & password collection
 EMAIL = input('\nEnter API User email: ')
